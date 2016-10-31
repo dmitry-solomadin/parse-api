@@ -1,6 +1,6 @@
 class Api::V1::PagesController < ApplicationController
   def index
-    render json: Page.includes(:tags).all
+    render json: Page.includes(:tags).order(:created_at).all
   end
 
   def create

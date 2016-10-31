@@ -2,11 +2,12 @@ require 'net/http'
 
 class PageParser
   def parse(page_url, pipeline: ParserPipeline.new, url_parser: UrlParser.new)
-    page = build_page(page_url, url_parser.parse(page_url), pipeline)
+    url = url_parser.parse(page_url)
+    page = build_page(page_url, url, pipeline)
 
     page.save ? ParseResult.success(page) : ParseResult.failure(page.errors)
 
-  rescue URI::InvalidURIError, SocketError
+  rescue
     ParseResult.failure(url: ['is invalid'])
   end
 

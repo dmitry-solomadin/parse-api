@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.6'
 
 gem 'rails-api'
@@ -18,6 +17,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'rspec-mocks'
+  gem 'webmock'
   gem 'shoulda-matchers'
   gem 'json_spec'
   gem 'database_cleaner'
