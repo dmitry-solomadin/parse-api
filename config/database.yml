@@ -1,0 +1,18 @@
+defaults: &defaults
+  adapter:  postgresql
+  host:     localhost
+  user: n2
+  encoding: unicode
+  pool:     5
+
+development:
+  <<: *defaults
+  database: parse_api_dev
+
+test:
+  <<: *defaults
+  database: parse_api_test
+
+production:
+  <<: *defaults
+  database: parse_api_prod
