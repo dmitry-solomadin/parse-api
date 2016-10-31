@@ -12,3 +12,5 @@
 # Tests
 
 * `rspec`
+
+PS. Note, that some of git history was lost so you can't evaluate commit history quality unfortunately.
